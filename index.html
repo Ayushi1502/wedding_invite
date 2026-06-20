@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Saurabh &amp; Anshu — A Sacred Union</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💕</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="video"
+      href="front.mp4"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="petals-canvas"></canvas>
+    <audio id="bg-audio" loop preload="none">
+      <source
+        src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/Ashish%20%26%20Ayushi/Jashn-E-Bahaaraa%20(Instrumental%20-%20Flute)%20%5B-2w18bd-ZQ4%5D.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <button
+      id="audio-btn"
+      title="Toggle music"
+      aria-label="Toggle background music"
+    >
+      <svg
+        id="icon-on"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M11 5L6 9H2v6h4l5 4V5zM19.07 4.93a10 10 0 010 14.14M15.54 8.46a5 5 0 010 7.07"
+        />
+      </svg>
+      <svg
+        id="icon-off"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        viewBox="0 0 24 24"
+        style="display: none"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M11 5L6 9H2v6h4l5 4V5zM23 9l-6 6M17 9l6 6"
+        />
+      </svg>
+    </button>
+    
+    <div id="entry-gate">
+      <video id="entry-video" playsinline preload="metadata" muted>
+        <source
+          src="front.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div id="play-overlay"></div>
+    </div>
+    <div id="main-content">
+      <!-- Hero Section -->
+      <section id="hero">
+        <video id="hero-bg-video" autoplay loop muted playsinline>
+          <source
+            src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/common-assets/Background.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="hero-frame"><span></span></div>
+        <div class="hero-card">
+          <div class="card-corner tl"></div>
+          <div class="card-corner tr"></div>
+          <div class="card-corner bl"></div>
+          <div class="card-corner br"></div>
+          <img
+            class="ganesh-icon"
+            src="https://pub-1953a6673e864f3488c645252f75de98.r2.dev/Shriya%20%26%20Ashutosh/Vianyak%20png.png"
+            alt="Shri Ganesh"
+            loading="eager"
+          />
+          <p style="
+    font-family: &quot;Tenor Sans&quot;, sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.3em;
+    color: var(--terracotta);
+    text-transform: uppercase;
+    margin-bottom: 1.25rem;
+">
+            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ<br>
+            निर्‌विघ्नं कुरु मे देव<br>
+            सर्वकार्येषु सर्वदा
+          </p>
+          <p class="blessings-text">
+            With the blessings of the Almighty &amp; our respected elders,<br />
+            we joyfully request your gracious presence on the wedding
+            celebration of
+          </p>
+          <div class="couple-block">
+            <span class="couple-name shimmer-gold">Chi. Saurabh</span>
+            <p class="family-line">
+              Son of Shri Ramdayal Sahu, Kathoutia, Gadarwara
+            </p>
+            <p class="family-subline">(Grandson of Late Shri Summelal Ji Sahu)</p>
+          </div>
+          <div class="ampersand-wrap">
+            <div class="ampersand-line"></div>
+            <span class="ampersand">&amp;</span>
+            <div class="ampersand-line"></div>
+          </div>
+          <div class="couple-block">
+            <span class="couple-name shimmer-gold">Sau. Kan. Anshu</span>
+            <p class="family-line">Daughter of Shri Subhash Ji Sahu, Sohagpur</p>
+            <p class="family-subline">(Granddaughter of Late Shri Premnarayan Ji Sahu)</p>
+          </div>
+          <div class="scroll-cue">
+            <p>Scroll</p>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+      <!-- Save The Date Scratch -->
+      <section id="scratch-reveal-section">
+        <div class="text-center reveal">
+          <span class="section-label">Save The Date</span>
+          <h2 class="section-heading" style="color: var(--terracotta)">
+            Reveal Our<br />Big Day
+          </h2>
+          <p
+            class="reveal reveal-delay-2 mt-4"
+            style="
+              font-style: italic;
+              color: var(--text-light);
+              font-size: 1.1rem;
+              margin-bottom: 1rem;
+            "
+          >
+            Scratch the hearts to reveal
+          </p>
+        </div>
+        <div class="hearts-row reveal reveal-delay-2" id="heartsRow">
+          <div class="heart-container" id="heartContainer1">
+            <div class="hidden-content">
+              <span class="label">DAY</span><span class="value">29</span>
+            </div>
+            <canvas id="scratchCanvas1" class="scratch-canvas"></canvas>
+          </div>
+          <div class="heart-container" id="heartContainer2">
+            <div class="hidden-content">
+              <span class="label">MONTH</span><span class="value">June</span>
+            </div>
+            <canvas id="scratchCanvas2" class="scratch-canvas"></canvas>
+          </div>
+          <div class="heart-container" id="heartContainer3">
+            <div class="hidden-content">
+              <span class="label">YEAR</span><span class="value">2026</span>
+            </div>
+            <canvas id="scratchCanvas3" class="scratch-canvas"></canvas>
+          </div>
+        </div>
+        <div class="text-center">
+          <div id="surpriseMessage" class="surprise-message">
+            The start of a beautiful journey...
+          </div>
+          <div id="countdown-container" class="countdown-container">
+            <div class="cd-item">
+              <span id="cd-days">00</span><small>Days</small>
+            </div>
+            <div class="cd-item">
+              <span id="cd-hours">00</span><small>Hrs</small>
+            </div>
+            <div class="cd-item">
+              <span id="cd-mins">00</span><small>Mins</small>
+            </div>
+            <div class="cd-item">
+              <span id="cd-secs">00</span><small>Secs</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Memories Section -->
+      <section id="memories-section">
+        <div class="text-center reveal">
+          <span class="section-label">A Glimpse of Us</span>
+          <h2 class="section-heading" style="color: var(--terracotta)">
+            Our Beautiful<br />Bride &amp; Groom 
+          </h2>
+          <div class="ornament mt-4">
+            <div class="ornament-line rev"></div>
+            <svg
+              width="12"
+              height="12"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              style="color: var(--gold)"
+            >
+              <path
+                d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"
+              />
+            </svg>
+            <div class="ornament-line"></div>
+          </div>
+        </div>
+        <div class="memories-frame reveal reveal-delay-2">
+          <div class="memories-inner">
+            <img src="bride1.jpeg" class="slide active" alt="Bride 1" />
+            <img src="bride2.jpeg" class="slide" alt="Bride 2" />
+            <img src="groom1.jpeg" class="slide" alt="Groom 1" />
+            <img src="groom2.jpeg" class="slide" alt="Groom 2" />
+          </div>
+        </div>
+        <p
+          class="text-center reveal reveal-delay-3 mt-8"
+          style="
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 1.1rem;
+          "
+        >
+          A journey of love, laughter, and cherished memories. Join us as we
+          celebrate the union of two souls destined to be together.
+        </p>
+      </section>
+      <!-- Events -->
+      <section id="events-section">
+        <div class="text-center reveal" style="margin-bottom: 3rem">
+          <span class="section-label">The Celebration Unfolds</span>
+          <h2 class="section-heading" style="color: var(--terracotta)">
+            Sacred<br />Ceremonies
+          </h2>
+          <div class="ornament mt-4">
+            <div class="ornament-line rev"></div>
+            <svg
+              width="12"
+              height="12"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              style="color: var(--gold)"
+            >
+              <path
+                d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"
+              />
+            </svg>
+            <div class="ornament-line"></div>
+          </div>
+        </div>
+        <!-- Pre‑Wedding Ritual 27 June -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">27th June, 2026 (Saturday)</p>
+            <h3 class="event-title">Ganesh Puja</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+        <!-- Pre‑Wedding Ritual 28 June -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">28th June, 2026 (Sunday)</p>
+            <h3 class="event-title">Matrimonial Ritual</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+        <!-- Ring Ceremony -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">29th June, 2026 (Monday) – 11:00 AM</p>
+            <h3 class="event-title">Ring Ceremony</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+        <!-- Faldan &amp; Lagun -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">29th June, 2026 (Monday) – 12:00 PM</p>
+            <h3 class="event-title">Faldan &amp; Lagun</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+        <!-- Chikat -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">29th June, 2026 (Monday) – 02:00 PM</p>
+            <h3 class="event-title">Chikat</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+        <!-- Feast &amp; Blessing -->
+        <div class="event-block reveal">
+          <div class="text-center mb-4">
+            <p class="event-subtitle">29th June, 2026 (Monday) – 07:00 PM</p>
+            <h3 class="event-title">Feast &amp; Blessing</h3>
+          </div>
+          <div class="event-venue-card reveal reveal-delay-1">
+            <span class="event-venue-name"
+              >Venue: Acharya Mahal, Kakra Road, Gadarwara</span
+            >
+            <a
+              class="event-dir-btn"
+              href="https://maps.google.com/?q=Acharya+Mahal,+Kakra+Road,+Gadarwara"
+              target="_blank"
+              rel="noopener"
+              >View on Maps</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Family & Relatives -->
+      <section id="family-section" class="reveal">
+        <div class="text-center">
+          <span class="section-label">Family &amp; Relatives</span>
+          <h2 class="section-heading" style="color: var(--terracotta)">
+            Our Loved Ones
+          </h2>
+          <p
+            style="
+              font-style: italic;
+              color: var(--text-light);
+              margin-top: 1rem;
+            "
+          >
+  <strong>Swagataakankshi (Those awaiting your welcome)</strong>
+  <ul>
+    <li><strong>Sisters-in-law &amp; Brothers (Bhabhi - Bhaiya):</strong> Rajni - Rakesh, Pooja - Dinesh, Durga - Pradeep, Manju - Pankaj, Abhishek - Bharti, Abhilasha - Siyaram, Sunil - Sushma, Rajkumar - Neha, Anshu - Vikas, Shivam - Raunak, Satyam - Kiran</li>
+    <li><strong>Brothers (Bhai):</strong> Vivek, Anand, Amit, Ashutosh, Shivansh, Keshav, Prashant</li>
+    <li><strong>Sisters (Bahan):</strong> Riya, Rishika, Vedika, Rajni, Gauri, Aradhya, Radhika</li>
+  </ul>
+
+  <strong>Darshnabhilashi (Those longing to see you)</strong>
+  <ul>
+    <li><strong>Aunts &amp; Uncles (Mami - Mamaji):</strong> Smt. Saraswati - Umashankar Sahu (Jhagarhai)</li>
+    <li><strong>Aunts (Mamiji):</strong> Smt. Malti - Poonamchand Sahu (Jhagarhai), Smt. Sadhana - Roopkumar Sahu (Jhagarhai)</li>
+    <li><strong>Paternal Aunts &amp; Uncles (Bua - Phuphaji):</strong> Smt. Haribai - Shri Sheetalprasad Sahu (Karhaiya), Smt. Mamta - Shri Rammanohar Sahu (Gidhwani), Smt. Anita - Shri Kailash Sahu (Karhaiya)</li>
+    <li><strong>Maternal Uncle (Mausa Ji):</strong> Shri Addhilal Ji Sahu (Narsinghpur)</li>
+    <li><strong>Sisters &amp; Brothers-in-law (Didi - Jijaji):</strong> Savita - Amit (Gadarwara), Neha - Sandeep (Aari), Nisha - Ajit (Gotegaon), Nikita - Vipin (Tendukheda), Rashmi - Lucky, Prachi - Shivam, Shivani - Shubham</li>
+  </ul>
+
+  <strong>Vineet (Humble Invitees)</strong>
+  <ul>
+    <li><strong>Grandmothers (Dadiji):</strong> Smt. Shakuntala Sahu, Smt. Reshambai, Smt. Sushila Sahu</li>
+    <li><strong>Elder Uncles &amp; Aunts (Badepapa - Mummy):</strong> Pushpa - Radheshyam Sahu, Smt. Suman - Pritam Sahu, Smt. Jyoti - Sanjay Sahu</li>
+    <li><strong>Mother &amp; Father (Mummy - Papaji):</strong> Smt. Sheelabai - Ramdayal Sahu</li>
+    <li><strong>Aunts &amp; Uncles (Chachi - Chachaji):</strong> Smt. Rekha - Vijay Sahu, Smt. Urmila - Deendayal Sahu, Smt. Bharti - Ramswaroop Sahu, Smt. Sheetal - Shravan Sahu</li>
+    <li><strong>Chahal Pahal (Little Ones / Children's Section):</strong> Shridha, Shri, Charchit (Chiku), Mishti, Kyara, Shubh</li>
+  </ul>
+          </p>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <section id="footer-section">
+        <div class="reveal" style="width: 100%">
+          <span
+            style="
+              font-family: &quot;Great Vibes&quot;, cursive;
+              font-size: clamp(5rem, 18vw, 8rem);
+              color: var(--gold-light);
+              display: block;
+              line-height: 1.1;
+            "
+          >
+            Chi. Saurabh<br />
+            <span
+              style="
+                font-size: clamp(3rem, 10vw, 5rem);
+                color: var(--gold);
+                display: block;
+                margin: 0.2rem 0;
+              "
+              >&amp;</span
+            >
+            Sau. Kan. Anshu
+          </span>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 1rem;
+              margin-top: 2rem;
+              opacity: 0.4;
+            "
+          >
+            <div
+              style="height: 1px; width: 60px; background: var(--gold-light)"
+            ></div>
+            <span style="color: var(--gold-light); font-size: 1.1rem">♥</span>
+            <div
+              style="height: 1px; width: 60px; background: var(--gold-light)"
+            ></div>
+          </div>
+        </div>
+        <div
+          style="
+            text-align: center;
+            margin-top: 4rem;
+            font-family: &quot;Tenor Sans&quot;, sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            color: rgba(255, 255, 255, 0.6);
+          "
+          class="reveal"
+        >
+          MADE WITH <span style="color: #e74c3c">♥</span>
+          <a
+            href=""
+            target="_blank"
+            rel="noopener"
+            style="color: var(--gold-light); text-decoration: none"
+            ></a
+          >
+        </div>
+      </section>
+      <!-- Modal -->
+      <div id="rsvp-modal">
+        <div class="modal-card">
+          <div class="modal-icon-ring" id="modal-icon">
+            <svg
+              id="modal-success-svg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
+          <h2 class="modal-title" id="modal-title">Thank You!</h2>
+          <p class="modal-msg" id="modal-msg">
+            We can't wait to celebrate with you!
+          </p>
+          <button class="modal-close-btn" id="modal-close">Close</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+
+  </body>
+</html>
